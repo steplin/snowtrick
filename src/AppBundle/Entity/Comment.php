@@ -121,6 +121,9 @@ class Comment
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
     public function getAuteur()
     {
         return $this->auteur;
@@ -134,6 +137,9 @@ class Comment
         $this->auteur = $auteur;
     }
 
+    /**
+     * @return mixed
+     */
     public function getTrick()
     {
         return $this->trick;

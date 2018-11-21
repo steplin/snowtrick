@@ -89,6 +89,9 @@ class User implements UserInterface, Serializable
      */
     private $image;
 
+    /**
+     * @return mixed
+     */
     public function __construct()
     {
         $this->addRole('ROLE_DEFAULT');
@@ -106,6 +109,9 @@ class User implements UserInterface, Serializable
         $this->id = $id;
     }
 
+    /**
+     * @return mixed
+     */
     public function getUsername()
     {
         return $this->username;
@@ -132,6 +138,9 @@ class User implements UserInterface, Serializable
         $this->password = $password;
     }
 
+    /**
+     * @return mixed
+     */
     public function getEmail()
     {
         return $this->email;
@@ -243,7 +252,7 @@ class User implements UserInterface, Serializable
     }
 
     /**
-     * @return Image
+     * @return mixed
      */
     public function getImage()
     {
