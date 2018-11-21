@@ -81,7 +81,6 @@ class UserManager
 
     public function registerMail(User $user)
     {
-
         $user->getImage()->setType('avatar');
         $this->createToken($user);
         $password = $this->encoderFactory->getEncoder($user)

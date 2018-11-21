@@ -40,7 +40,9 @@ class TrickManager
             ->getListTricks(Trick::NB_TRICKS_PAGE);
     }
 
-
+    /**
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
     public function countTricks()
     {
         return $this->em->getRepository('AppBundle:Trick')->countTricksMax();
