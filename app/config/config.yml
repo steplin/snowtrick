@@ -40,6 +40,7 @@ twig:
     avatar_directory_mini: '/uploads/avatar/mini/'
     trick_directory: '/uploads/trick/'
     trick_directory_mini: '/uploads/trick/mini/'
+    snowpassion_ico: '/snowpassion.ico'
   strict_variables: '%kernel.debug%'
   form_themes:
   - 'bootstrap_3_layout.html.twig'
