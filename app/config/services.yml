@@ -1,0 +1,40 @@
+parameters:
+
+services:
+
+  _defaults:
+
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  AppBundle\:
+    resource: '../../src/AppBundle/*'
+    exclude: '../../src/AppBundle/{Entity,Repository,Tests}'
+
+  AppBundle\Controller\:
+    resource: '../../src/AppBundle/Controller'
+    public: true
+    tags: ['controller.service_arguments']
+
+  AppBundle\EventListener\SPImageSubscriber:
+    arguments:
+      $target_directory: '%image_directory%'
+    tags:
+    - { name: doctrine.event_subscriber, connection: default }
+
+  AppBundle\Service\SPMailer:
+    arguments:
+      $from: '%mailer_user%'
+      $url: '%kernel.project_dir%'
+
+  twig.extension.intl:
+    public: true
+    class: Twig_Extensions_Extension_Intl
+    tags:
+    - { name: twig.extension }
+
+  twig.extension.text:
+    class: Twig_Extensions_Extension_Text
+    tags:
+    - { name: twig.extension }

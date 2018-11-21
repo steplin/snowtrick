@@ -1,4 +1,3 @@
-#app/config/security.yml
 security:
   encoders:
 
@@ -27,4 +26,3 @@ security:
         target: homepage
   access_control:
   - { path: ^/admin/, roles: ROLE_ADMIN }
-
