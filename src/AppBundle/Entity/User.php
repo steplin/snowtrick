@@ -242,6 +242,9 @@ class User implements UserInterface, Serializable
             ) = unserialize($serialized);
     }
 
+    /**
+     * @return Image
+     */
     public function getImage()
     {
         return $this->image;

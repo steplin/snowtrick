@@ -12,7 +12,6 @@ namespace AppBundle\Manager;
 use AppBundle\Entity\User;
 use AppBundle\Service\SPMailer;
 use Doctrine\ORM\EntityManagerInterface;
-use Psr\Container\ContainerInterface;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 
 class UserManager
@@ -25,7 +24,6 @@ class UserManager
      * @var EntityManagerInterface
      */
     private $em;
-    private $container;
     /**
      * @var EncoderFactoryInterface
      */
@@ -34,12 +32,10 @@ class UserManager
     public function __construct(
         SPMailer $mailer,
         EntityManagerInterface $em,
-        EncoderFactoryInterface $encoderFactory,
-        ContainerInterface $container
+        EncoderFactoryInterface $encoderFactory
     ) {
         $this->mailer = $mailer;
         $this->em = $em;
-        $this->container = $container;
         $this->setEncoderFactory($encoderFactory);
     }
 
@@ -85,6 +81,7 @@ class UserManager
 
     public function registerMail(User $user)
     {
+
         $user->getImage()->setType('avatar');
         $this->createToken($user);
         $password = $this->encoderFactory->getEncoder($user)
