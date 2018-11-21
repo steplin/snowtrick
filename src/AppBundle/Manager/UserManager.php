@@ -34,7 +34,6 @@ class UserManager
         SPMailer $mailer,
         EntityManagerInterface $em,
         EncoderFactoryInterface $encoderFactory
-
     ) {
         $this->mailer = $mailer;
         $this->em = $em;

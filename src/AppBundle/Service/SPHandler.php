@@ -108,9 +108,6 @@ class SPHandler
         return $this->router->generate($name);
     }
 
-    /**
-     * @return mixed
-     */
     public function formData()
     {
         return $this->form->getData();
