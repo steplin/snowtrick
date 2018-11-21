@@ -35,7 +35,10 @@
         "symfony/swiftmailer-bundle": "^2.6.4",
         "symfony/symfony": "3.4.*",
         "twig/extensions": "^1.5",
-        "twig/twig": "^1.0||^2.0"
+        "twig/twig": "^1.0||^2.0",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-intl": "*"
     },
     "require-dev": {
         "dama/doctrine-test-bundle": "^3.0",
