@@ -36,8 +36,6 @@ class TrickRepository extends \Doctrine\ORM\EntityRepository
 
     /**
      * @throws \Doctrine\ORM\NonUniqueResultException
-     *
-     * @return mixed
      */
     public function countTricksMax()
     {

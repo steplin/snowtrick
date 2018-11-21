@@ -21,8 +21,6 @@ class UserRepository extends \Doctrine\ORM\EntityRepository
      * @param $token
      *
      * @throws \Doctrine\ORM\NonUniqueResultException
-     *
-     * @return mixed
      */
     public function tokenIsValid($token)
     {
