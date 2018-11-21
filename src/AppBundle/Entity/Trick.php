@@ -261,6 +261,9 @@ class Trick
         return $this;
     }
 
+    /**
+     * @return User
+     */
     public function getAuteur()
     {
         return $this->auteur;
