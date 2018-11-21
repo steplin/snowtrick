@@ -9,6 +9,7 @@
 
 namespace AppBundle\Repository;
 
+
 class TrickRepository extends \Doctrine\ORM\EntityRepository
 {
     public function getAll()
@@ -28,9 +29,7 @@ class TrickRepository extends \Doctrine\ORM\EntityRepository
         return $query->getResult();
     }
 
-    /**
-     * @throws \Doctrine\ORM\NonUniqueResultException
-     */
+
     public function countTricksMax()
     {
         return $this->createQueryBuilder('a')
